@@ -1,6 +1,7 @@
 package com.example.appalarmamedicamentos.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -15,6 +16,7 @@ import android.widget.Toast
 import com.example.appalarmamedicamentos.databinding.ActivityLoginBinding
 
 import com.example.appalarmamedicamentos.R
+import com.example.appalarmamedicamentos.RegisterUserActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -33,38 +35,7 @@ class LoginActivity : AppCompatActivity() {
         val login = binding.login
         val loading = binding.loading
 
-        loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
-            .get(LoginViewModel::class.java)
 
-        loginViewModel.loginFormState.observe(this@LoginActivity, Observer {
-            val loginState = it ?: return@Observer
-
-            // disable login button unless both username / password is valid
-            login.isEnabled = loginState.isDataValid
-
-            if (loginState.usernameError != null) {
-                username.error = getString(loginState.usernameError)
-            }
-            if (loginState.passwordError != null) {
-                password.error = getString(loginState.passwordError)
-            }
-        })
-
-        loginViewModel.loginResult.observe(this@LoginActivity, Observer {
-            val loginResult = it ?: return@Observer
-
-            loading.visibility = View.GONE
-            if (loginResult.error != null) {
-                showLoginFailed(loginResult.error)
-            }
-            if (loginResult.success != null) {
-                updateUiWithUser(loginResult.success)
-            }
-            setResult(Activity.RESULT_OK)
-
-            //Complete and destroy login activity once successful
-            finish()
-        })
 
         username.afterTextChanged {
             loginViewModel.loginDataChanged(
@@ -96,6 +67,11 @@ class LoginActivity : AppCompatActivity() {
                 loading.visibility = View.VISIBLE
                 loginViewModel.login(username.text.toString(), password.text.toString())
             }
+        }
+
+        binding.tvRegister?.setOnClickListener {
+            val intent = Intent(this, RegisterUserActivity::class.java)
+            startActivity(intent)
         }
     }
 
