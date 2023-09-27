@@ -13,6 +13,29 @@
         android:theme="@style/Theme.AppAlarmaMedicamentos"
         tools:targetApi="31">
         <activity
+            android:name=".ui.detailMedicamento.DetailMedicamentoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.detailAlarmas.DetailAlarmasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.principalAlarmas.PrincipalAlarmas"
+            android:exported="false" />
+        <activity
+            android:name=".ui.listadoMedicamentos.listadoMedicamentosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.cambioPwd.CambioPwdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.informacioncuenta.InformacionCuentaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InformacionCuentaActivity"
+            android:exported="false"
+            android:label="@string/title_activity_informacion_cuenta"
+            android:theme="@style/Theme.AppAlarmaMedicamentos" />
+        <activity
             android:name=".DetalleMedicamentoActivity"
             android:exported="false"
             android:label="@string/title_activity_detalle_medicamento"
@@ -36,11 +59,6 @@
             android:name=".cambioPasswordActivity"
             android:exported="false"
             android:label="@string/title_activity_cambio_password"
-            android:theme="@style/Theme.AppAlarmaMedicamentos" />
-        <activity
-            android:name=".InformacionCuentaActivity"
-            android:exported="false"
-            android:label="@string/title_activity_informacion_cuenta"
             android:theme="@style/Theme.AppAlarmaMedicamentos" />
         <activity
             android:name=".RegisterUserActivity"
