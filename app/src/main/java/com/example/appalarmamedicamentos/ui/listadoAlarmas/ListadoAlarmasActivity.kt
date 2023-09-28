@@ -1,12 +1,12 @@
-package com.example.appalarmamedicamentos.ui.listadoMedicamentos
+package com.example.appalarmamedicamentos.ui.listadoAlarmas
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.appalarmamedicamentos.R
 
-class listadoMedicamentosActivity : AppCompatActivity() {
+class ListadoAlarmasActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_listado_medicamentos)
+        setContentView(R.layout.activity_principal_alarmas)
     }
 }
