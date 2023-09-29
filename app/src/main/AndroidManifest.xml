@@ -35,9 +35,7 @@
         <activity
             android:name=".ui.listadoMedicamentos.ListadoMedicamentosActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.cambioPwd.CambioPwdActivity"
-            android:exported="false" />
+
         <activity
             android:name=".ui.informacioncuenta.InformacionCuentaActivity"
             android:exported="false" />

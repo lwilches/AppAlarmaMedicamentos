@@ -1,4 +1,4 @@
-package com.example.appalarmamedicamentos.ui.gallery
+package com.example.appalarmamedicamentos.ui.infocuenta
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
