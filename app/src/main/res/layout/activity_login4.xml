@@ -42,6 +42,8 @@ tools:context=".ui.login.LoginActivity">
     app:layout_constraintRight_toRightOf="parent"
     android:layout_marginTop="30dp"/>
 
+
+
 <EditText
     android:id="@+id/etPassword"
     android:layout_width="0dp"
