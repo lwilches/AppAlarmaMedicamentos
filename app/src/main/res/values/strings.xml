@@ -2,14 +2,16 @@
     <string name="app_name">AppAlarmaMedicamentos</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Bienvenido</string>
+    <string name="nav_header_subtitle">usuario@correo.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_alarmas">Alarmas</string>
+    <string name="menu_informacionCta">Información cuenta</string>
+    <string name="menu_medicamentos">Medicamentos asociados</string>
+    <string name="menu_cambioPwd">Cambiar contraseña</string>
+
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Usuario</string>
     <string name="prompt_password">Contraseña</string>

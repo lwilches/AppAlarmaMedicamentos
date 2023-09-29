@@ -9,15 +9,17 @@ import com.example.appalarmamedicamentos.R
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appalarmamedicamentos.ui.listadoMedicamentos.AdapaterMedicamentosList
 
-class AdaptadorAlarmaList(private val itemList: List<ItemAlarma>):
-    RecyclerView.Adapter<AdaptadorAlarmaList.ViewHolder>() {
+class AdapterAlarmaList(private val itemList: List<ItemAlarma>):
+    RecyclerView.Adapter<AdapterAlarmaList.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapaterMedicamentosList.ViewHolder {
+
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterAlarmaList.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item_alarma, parent, false)
-        return AdapaterMedicamentosList.ViewHolder(view)
+        return AdapterAlarmaList.ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: AdapaterMedicamentosList.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AdapterAlarmaList.ViewHolder, position: Int) {
         val item = itemList[position]
         holder.tvName.text = item.name
         holder.tvDescription.text = item.description
@@ -32,7 +34,7 @@ class AdaptadorAlarmaList(private val itemList: List<ItemAlarma>):
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvName: TextView = itemView.findViewById(R.id.tvName)
         val tvDescription: TextView = itemView.findViewById(R.id.tvDescription)
-        val imageView: ImageView = itemView.findViewById(R.id.tvAlarmaId)
+        //val imageView: ImageView = itemView.findViewById(R.id.tvAlarmaId)
     }
 
 }
